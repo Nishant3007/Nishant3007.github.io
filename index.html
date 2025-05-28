@@ -47,22 +47,39 @@
       flex: 1 1 calc(33.333% - 26.67px);
       max-width: calc(33.333% - 26.67px);
       box-sizing: border-box;
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Added for smooth scaling and opacity change */
     }
     .portfolio-wrap {
-      background: #fff !important; /* Ensure white background, overriding external styles */
+      background: #fff !important;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 30px; /* Increased from 25px to 30px for more internal space */
+      padding: 30px 40px; /* Increased horizontal padding from 30px to 40px, kept vertical at 30px */
       transition: all 0.3s ease;
       height: 100%;
-      min-height: 300px; /* Added to ensure enough space for content and links */
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+    .portfolio-wrap img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
     .portfolio-wrap:hover {
       transform: scale(1.03);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    /* When one portfolio item is hovered, scale down and fade others */
+    .portfolio-container:hover .portfolio-item {
+      transform: scale(0.1);
+      opacity: 0.2;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.03) !important; /* Override the scale-down for the hovered item */
+      opacity: 1 !important; /* Ensure the hovered item remains fully visible */
     }
     .portfolio-wrap h4 {
       font-size: 20px;
@@ -82,14 +99,14 @@
     }
     .portfolio-links {
       display: none;
-      margin-top: 20px; /* Increased from 15px to 20px for better spacing */
+      margin-top: 20px;
       text-align: center;
     }
     .portfolio-wrap:hover .portfolio-links {
       display: flex;
       justify-content: center;
       gap: 10px;
-      flex-wrap: wrap; /* Allow buttons to wrap if space is tight */
+      flex-wrap: wrap;
     }
     .portfolio-links a {
       display: inline-flex;
@@ -102,7 +119,7 @@
       font-size: 14px;
       font-weight: 500;
       transition: background 0.3s ease;
-      white-space: nowrap; /* Prevent button text from wrapping */
+      white-space: nowrap;
     }
     .portfolio-links a i {
       margin-right: 8px;
@@ -128,7 +145,7 @@
         max-width: 100%;
       }
       .portfolio-wrap {
-        min-height: 280px; /* Slightly reduced for smaller screens */
+        min-height: 280px;
       }
     }
   </style>
@@ -234,6 +251,7 @@
         <div class="portfolio-container">
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://play-lh.googleusercontent.com/8wAlmAuIyyLx2fvwhwYN8N-zCNgzVllVcXcTtKmHEH0T4d124E9pH4I8gibTgCWf9g=w480-h960-rw" alt="MyPlan Logo">
               <h4>MyPlan: Daily Routine Planner</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A daily routine planner app with customizable widgets, notifications, progress tracking, and cloud sync.</p>
@@ -246,6 +264,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://play-lh.googleusercontent.com/rBdO6yMujazTTs31Aa7L4WqtEysOQuFFaQJlBiYeoR6aux_RgiybwvExRdq1tbigJA=w480-h960-rw" alt="Club Mabieat Logo">
               <h4>Club Mabieat</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A hospitality promotion service in India offering loyalty programs and discounts for luxury hotels and restaurants.</p>
@@ -258,6 +277,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://play-lh.googleusercontent.com/dr6hNymKrY5XBpcPSCDshzLpFR4QTS5pLZKokqUoeX4FWJF37OanodqH-iHILV-s8jw=w480-h960-rw" alt="myShetra Logo">
               <h4>myShetra: Neighborhood Connection Platform</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A platform connecting neighbors through hyperlocal content sharing and community interaction.</p>
@@ -270,6 +290,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://play-lh.googleusercontent.com/wdzhKai47eS1253aIsywX6m33C2-4dTMFNb8beyhlvwktWNVd-QzK3ShhIdDPc9Mjrg=w480-h960-rw" alt="PackersBility Logo">
               <h4>PackersBility - Moving & Packing Services</h4>
               <p><strong>Platforms:</strong> Android</p>
               <p>An online tool for creating, editing, and sharing moving and packing service documents like quotations and bills.</p>
@@ -281,6 +302,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c4/ba/67/c4ba6758-05d1-5438-bdf8-ad005bebac55/AppIcon-1x_U007emarketing-0-11-0-0-85-220-0.png/460x0w.webp" alt="Rajsi Verma Logo">
               <h4>Rajsi Verma</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A content creator platform for sharing exclusive content and monetizing digital presence.</p>
@@ -292,6 +314,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/73/fb/6a73fb20-df82-5c29-c36d-11604d21f5ad/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/460x0w.webp" alt="EndwellCare Life Logo">
               <h4>EndwellCare Life</h4>
               <p><strong>Platform:</strong> iOS</p>
               <p>A palliative care app for care coordination, health tracking, and communication.</p>
@@ -303,6 +326,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://play-lh.googleusercontent.com/kezlgf9pvYA_PMGcMouQeBbA3v1ZDrDAvyM-KyO66lnyHxW6qGXMZOI2zKZ3rCsbEctN=w480-h960-rw" alt="Tiku Tv Logo">
               <h4>Tiku Tv</h4>
               <p><strong>Platform:</strong> Android</p>
               <p>A subscription-based OTT platform for movies, web series, and exclusive content.</p>
@@ -314,6 +338,7 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-wrap">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/26/e9/26/26e9268c-ac97-b7da-cae2-1310052a41aa/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/460x0w.webp" alt="Hevesli Turkish Kebab & Pizza Logo">
               <h4>Hevesli Turkish Kebab & Pizza - Online Food Ordering PWA</h4>
               <p><strong>Platform:</strong> iOS (PWA)</p>
               <p>A PWA for a UK restaurant chain, enabling menu browsing and online food ordering.</p>
