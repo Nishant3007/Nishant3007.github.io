@@ -15,38 +15,115 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
+    .portfolio .section-title h2 {
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    .portfolio .section-title h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, #007bff, #00c4ff);
+      border-radius: 2px;
+    }
+    .portfolio .section-title p {
+      color: #666;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .portfolio-item {
+      flex: 1 1 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+      box-sizing: border-box;
+    }
     .portfolio-wrap {
-      background: linear-gradient(135deg, #e6f0fa 0%, #ffffff 100%);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .portfolio-wrap:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    .portfolio-wrap h4 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .portfolio-wrap p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+    .portfolio-wrap p strong {
+      color: #333;
+      font-weight: 600;
     }
     .portfolio-links {
       display: none;
-      margin-top: 10px;
+      margin-top: 15px;
+      text-align: center;
     }
     .portfolio-wrap:hover .portfolio-links {
-      display: block;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
     }
     .portfolio-links a {
-      display: inline-block;
-      margin: 5px 10px 0 0;
+      display: inline-flex;
+      align-items: center;
       padding: 8px 16px;
-      background-color: #007bff;
+      background: #007bff;
       color: #fff;
-      border-radius: 4px;
+      border-radius: 25px;
       text-decoration: none;
       font-size: 14px;
-      transition: background-color 0.3s ease;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .portfolio-links a i {
+      margin-right: 8px;
     }
     .portfolio-links a:hover {
-      background-color: #0056b3;
+      background: #0056b3;
+    }
+    .portfolio-links a.google-play {
+      background: #34c759;
+    }
+    .portfolio-links a.google-play:hover {
+      background: #2aa847;
+    }
+    @media (max-width: 991px) {
+      .portfolio-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+      }
+    }
+    @media (max-width: 575px) {
+      .portfolio-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -87,7 +164,7 @@
           <div class="col-lg-12 content">
             <h3>Flutter Developer & Mobile App Specialist</h3>
             <p class="font-italic">
-              I'm passionate about building intuitive and performant mobile apps using Flutter. My focus is on delivering clean, scalable code and exceptional user experiences for iOS and Android platforms.
+              I'm passionate about building intuitive and performant mobile apps using Flutter. My focus is on delivering clean, scalable code and exceptional user experiences for iOS and 🙂 platforms.
             </p>
           </div>
         </div>
@@ -148,95 +225,95 @@
           <h2>Portfolio</h2>
           <p>Explore some of my featured Flutter projects, showcasing cross-platform mobile app development for iOS and Android.</p>
         </div>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up">
+        <div class="portfolio-container">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>MyPlan: Daily Routine Planner</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A daily routine planner app with customizable widgets, notifications, progress tracking, and cloud sync.</p>
               <p><strong>Key Features:</strong> Intuitive UI, dark/light mode, calendar integration, goal setting, habit tracking.</p>
               <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.myplan.minutestechnology" target="_blank">Google Play</a>
-                <a href="https://apps.apple.com/in/app/myplan-daily-routine-planner/id6743796631" target="_blank">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.myplan.minutestechnology" target="_blank" class="google-play"><i class="fab fa-google-play"></i> Google Play</a>
+                <a href="https://apps.apple.com/in/app/myplan-daily-routine-planner/id6743796631" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>Club Mabieat</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A hospitality promotion service in India offering loyalty programs and discounts for luxury hotels and restaurants.</p>
               <p><strong>Key Features:</strong> Event discovery, in-app reservations, push notifications, location-based recommendations.</p>
               <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.clubmabieat.app" target="_blank">Google Play</a>
-                <a href="https://apps.apple.com/in/app/club-mabieat/id6741190758" target="_blank">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.clubmabieat.app" target="_blank" class="google-play"><i class="fab fa-google-play"></i> Google Play</a>
+                <a href="https://apps.apple.com/in/app/club-mabieat/id6741190758" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>myShetra: Neighborhood Connection Platform</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A platform connecting neighbors through hyperlocal content sharing and community interaction.</p>
               <p><strong>Key Features:</strong> Hyperlocal feed, post creation, likes/replies, geographic zone navigation.</p>
               <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.myshetra.app" target="_blank">Google Play</a>
-                <a href="https://apps.apple.com/in/app/myshetra/id6739838343" target="_blank">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.myshetra.app" target="_blank" class="google-play"><i class="fab fa-google-play"></i> Google Play</a>
+                <a href="https://apps.apple.com/in/app/myshetra/id6739838343" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>PackersBility - Moving & Packing Services</h4>
               <p><strong>Platforms:</strong> Android</p>
               <p>An online tool for creating, editing, and sharing moving and packing service documents like quotations and bills.</p>
               <p><strong>Key Features:</strong> Easy billing, location-based service discovery, secure payments.</p>
               <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.workstick.packers_bility&hl=en_US" target="_blank">Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.workstick.packers_bility&hl=en_US" target="_blank" class="google-play"><i class="fab fa-google-play"></i> Google Play</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>Rajsi Verma</h4>
               <p><strong>Platforms:</strong> iOS, Android</p>
               <p>A content creator platform for sharing exclusive content and monetizing digital presence.</p>
               <p><strong>Key Features:</strong> Content scheduling, subscriber management, in-app purchases, DRM-protected media.</p>
               <div class="portfolio-links">
-                <a href="https://apps.apple.com/in/app/rajsi-verma/id6593677080" target="_blank">App Store</a>
+                <a href="https://apps.apple.com/in/app/rajsi-verma/id6593677080" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="500">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>EndwellCare Life</h4>
               <p><strong>Platform:</strong> iOS</p>
               <p>A palliative care app for care coordination, health tracking, and communication.</p>
               <p><strong>Key Features:</strong> Care hub, health tracking, document upload, real-time notes, educational resources.</p>
               <div class="portfolio-links">
-                <a href="https://apps.apple.com/in/app/endwellcare-life/id6483207532" target="_blank">App Store</a>
+                <a href="https://apps.apple.com/in/app/endwellcare-life/id6483207532" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="600">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>Tiku Tv</h4>
               <p><strong>Platform:</strong> Android</p>
               <p>A subscription-based OTT platform for movies, web series, and exclusive content.</p>
               <p><strong>Key Features:</strong> Ad-free viewing, affordable plans, exclusive premieres.</p>
               <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.tikumovies.app" target="_blank">Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tikumovies.app" target="_blank" class="google-play"><i class="fab fa-google-play"></i> Google Play</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="700">
+          <div class="portfolio-item">
             <div class="portfolio-wrap">
               <h4>Hevesli Turkish Kebab & Pizza - Online Food Ordering PWA</h4>
               <p><strong>Platform:</strong> iOS (PWA)</p>
               <p>A PWA for a UK restaurant chain, enabling menu browsing and online food ordering.</p>
               <p><strong>Key Features:</strong> Menu browsing, order customization, secure payments, real-time tracking.</p>
               <div class="portfolio-links">
-                <a href="https://apps.apple.com/in/app/hevesli-kebab/id6503038921" target="_blank">App Store</a>
+                <a href="https://apps.apple.com/in/app/hevesli-kebab/id6503038921" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
