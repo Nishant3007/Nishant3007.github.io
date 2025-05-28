@@ -40,21 +40,22 @@
     .portfolio-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 40px; /* Increased from 30px to 40px for more spacing */
+      gap: 40px;
       justify-content: center;
     }
     .portfolio-item {
-      flex: 1 1 calc(33.333% - 26.67px); /* Adjusted for 40px gap: (40px * 2) / 3 = 26.67px */
+      flex: 1 1 calc(33.333% - 26.67px);
       max-width: calc(33.333% - 26.67px);
       box-sizing: border-box;
     }
     .portfolio-wrap {
-      background: #fff;
+      background: #fff !important; /* Ensure white background, overriding external styles */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 25px;
+      padding: 30px; /* Increased from 25px to 30px for more internal space */
       transition: all 0.3s ease;
       height: 100%;
+      min-height: 300px; /* Added to ensure enough space for content and links */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -81,13 +82,14 @@
     }
     .portfolio-links {
       display: none;
-      margin-top: 15px;
+      margin-top: 20px; /* Increased from 15px to 20px for better spacing */
       text-align: center;
     }
     .portfolio-wrap:hover .portfolio-links {
       display: flex;
       justify-content: center;
       gap: 10px;
+      flex-wrap: wrap; /* Allow buttons to wrap if space is tight */
     }
     .portfolio-links a {
       display: inline-flex;
@@ -100,6 +102,7 @@
       font-size: 14px;
       font-weight: 500;
       transition: background 0.3s ease;
+      white-space: nowrap; /* Prevent button text from wrapping */
     }
     .portfolio-links a i {
       margin-right: 8px;
@@ -115,7 +118,7 @@
     }
     @media (max-width: 991px) {
       .portfolio-item {
-        flex: 1 1 calc(50% - 20px); /* Adjusted for 40px gap: 40px / 2 = 20px */
+        flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
       }
     }
@@ -123,6 +126,9 @@
       .portfolio-item {
         flex: 1 1 100%;
         max-width: 100%;
+      }
+      .portfolio-wrap {
+        min-height: 280px; /* Slightly reduced for smaller screens */
       }
     }
   </style>
@@ -311,9 +317,9 @@
               <h4>Hevesli Turkish Kebab & Pizza - Online Food Ordering PWA</h4>
               <p><strong>Platform:</strong> iOS (PWA)</p>
               <p>A PWA for a UK restaurant chain, enabling menu browsing and online food ordering.</p>
-              <p><strong>Key Features:</strong> Menu browsing, order customization</p>
+              <p><strong>Key Features:</strong> Menu browsing, order customization, secure payments, real-time tracking.</p>
               <div class="portfolio-links">
-                <a href="https://apps.apple.com/in/app/hevesnet-kebabiet/id649" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+                <a href="https://apps.apple.com/in/app/hevesli-kebab/id6503038921" target="_blank"><i class="fab fa-apple"></i> App Store</a>
               </div>
             </div>
           </div>
@@ -328,13 +334,13 @@
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="section-title">Summary</h3>
+            <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Nishant Sabbarwal</h4>
-              <p><em>Flutter developer with 4+ years of experience in designing and developing mobile applications.</p>
+              <p><em>Flutter developer with 4+ years of experience in designing and developing mobile applications.</em></p>
               <ul style="list-style:none">
                 <li>Delhi, India</li>
-                <li>+91 120 515 4336</li>
+                <li>+91 920 515 4336</li>
                 <li>sabbarwaln4@gmail.com</li>
               </ul>
             </div>
